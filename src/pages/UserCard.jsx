@@ -12,7 +12,7 @@ import {
   CardGroup,
 } from "reactstrap";
 
-const UserCard = () => {
+const UserCard = ({results}) => {
   const [users, setUsers] = useState([]);
 
   const fetchApiData = async () => {
@@ -33,9 +33,9 @@ const UserCard = () => {
     <>
       <Col lg="12" md="6" sm="12">
         <Row sm="1" md="2" lg="3">
-          {users.map((user) => {
+          {results.map((user) => {
             return (
-              <CardGroup className="pt-4">
+              <CardGroup key={user.id}className="pt-4">
                 <Card key={user.id}>
                   <CardImg
                     alt="Card image cap"

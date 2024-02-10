@@ -13,10 +13,7 @@ const Footer = () => {
               <div>
                 <h4>BizConnect</h4>
               </div>
-              <p className="mt-4 text-black">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Blanditiis, nobis.
-              </p>
+              <p className="mt-4 text-black">Your Partner in Professional Progress!</p>
             </div>
           </Col>
           <Col lg="4" md="6" sm="12" className="mb-4">

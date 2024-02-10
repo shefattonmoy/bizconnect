@@ -1,4 +1,4 @@
-import "./Header.css";
+import "../../styles/Header.css";
 import { Container, Row } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import userIcon from "../../assets/images/user-icon.png";
