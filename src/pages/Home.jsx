@@ -1,8 +1,9 @@
+import React, { useState, useEffect } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
 import UserCard from "./UserCard";
 import SearchBar from "../components/SearchBar/SearchBar";
-import { useState, useEffect } from "react";
+import UserForm from "../components/UserForm/UserForm";
 
 const Home = () => {
   const [results, setResults] = useState([]);
@@ -22,6 +23,10 @@ const Home = () => {
       });
   };
 
+  const addUser = (newUser) => {
+    setResults((prevUsers) => [...prevUsers, newUser]);
+  };
+
   return (
     <Helmet title={"Home"}>
       <section className="users-section">
@@ -32,6 +37,10 @@ const Home = () => {
               <h2 className="users-section-title">Our Users</h2>
             </Col>
             <UserCard results={results}></UserCard>
+            <Col lg="12" className="text-center mt-4">
+              <h2 className="users-section-title">Add New User</h2>
+              <UserForm addUser={addUser}></UserForm>
+            </Col>
           </Row>
         </Container>
       </section>
